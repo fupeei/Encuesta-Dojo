@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}">
+        <title>Encuesta Dojo</title>
+    </head>
+    <body>
+        <h1>Resultados</h1>
+        <div class="container">
+            <div>
+                <table class="tabla_datos">
+                    <thead>
+                    <tr>
+                        <th>Informacion de Usuario</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>{{session.datos.first_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Apellido</td>
+                        <td>{{session.datos.last_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguaje Favorito</td>
+                        <td>{{session.datos.lenfav}}</td>
+                    </tr>
+                    <tr>
+                        <td>Localidad de Dojo</td>
+                        <td>{{session.datos.dojolocation}}</td>
+                    </tr>
+                    <tr>
+                        <td>Comentarios</td>
+                        <td>{{session.datos.coments}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
